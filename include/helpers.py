@@ -28,7 +28,7 @@ def load_and_crop(imgname,target_width=512,target_height=512):
 	imgname: string of image location
 	load an image, and center-crop if the image is large enough, else return none
 	'''
-	img = Image.open(fname)
+	img = Image.open(imgname)
 	width, height = img.size
 	if width <= target_width or height <= target_height:
 		return None	
