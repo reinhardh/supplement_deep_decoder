@@ -33,8 +33,8 @@ conda install jupyter
 @article{heckel_deep_2018,
     author    = {Reinhard Heckel and Paul Hand},
     title     = {Deep Decoder: Concise Image Representations from Untrained Non-convolutional Networks},
-    journal   = {arXiv:?},
-    year      = {2018}
+    journal   = {International Conference on Learning Representations},
+    year      = {2019}
 }
 ```
 

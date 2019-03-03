@@ -116,7 +116,7 @@ def fit(net,
             if i % 10 == 0:
                 out2 = net(Variable(net_input_saved).type(dtype))
                 loss2 = mse(out2, img_clean_var)
-                print ('Iteration %05d    Train loss %f  Actual loss %f Actual loss orig %f  Noise Energy %f' % (i, loss.data[0],true_loss.data[0],loss2.data[0],noise_energy.data[0]), '\r', end='')
+                print ('Iteration %05d    Train loss %f  Actual loss %f Actual loss orig %f  Noise Energy %f' % (i, loss.data,true_loss.data,loss2.data,noise_energy.data), '\r', end='')
             return loss
 
         
@@ -131,8 +131,8 @@ def fit(net,
             
         if find_best:
             # if training loss improves by at least one percent, we found a new best net
-            if best_mse > 1.005*loss.data[0]:
-                best_mse = loss.data[0]
+            if best_mse > 1.005*loss.data:
+                best_mse = loss.data
                 best_net = copy.deepcopy(net)
                  
         
